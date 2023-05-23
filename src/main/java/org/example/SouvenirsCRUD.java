@@ -136,7 +136,7 @@ public class SouvenirsCRUD {
 //  Видалити заданого виробника та його сувеніри.
     public void deleteManufacturerAndSouvenirs(String name) {
         List<Manufacturer> manufacturers = readAllManufacturers();
-        List<Souvenir> souvenirs = getSouvenirsByManufacturer(name);
+        List<Souvenir> souvenirs = readAllSouvenirs();
         try {
             Files.delete(manufacturersFile.toPath());
             Files.delete(souvenirsFile.toPath());
